@@ -1,3 +1,4 @@
+// OK
 import React, { Component } from "react";
 import API from "../../utils/API";
 import "./acctForm.css";
@@ -32,24 +33,6 @@ class CreateAcctForm extends Component {
         // Preventing the default behavior of the form submit (which is to refresh the page)
         event.preventDefault();
         console.log("yay we got here");
-      //   if (!this.state.userName || !this.state.company || !this.state.password) {
-      //     alert("Please enter a UserName, Company, and Password!");
-      //   } else if (this.state.password.length < 6) {
-      //     alert(
-      //       `Choose a more secure password, ${this.state.userName}, by the way, I love what you are doing at  ${this.state
-      //         .company}`
-      //     );
-      //   // } else {
-      //   //   alert(`Hello ${this.state.firstName} ${this.state.lastName}`);
-      //   // }
-    
-      //   this.setState({
-      //     userName: "",
-      //     company: "",
-      //     phoneNumber: "",
-      //     password: "",
-      //   });
-      // };
       
       this.createUser({ userName: this.state.userName,
         company: this.state.company,
@@ -61,18 +44,13 @@ class CreateAcctForm extends Component {
 
     }
 
-    // handleFormSubmit = event => {
-        // Preventing the default behavior of the form submit (which is to refresh the page)
-    //     event.preventDefault();
-    // };
-
 
     createUser = query => {
       console.log(`query= ${JSON.stringify(query)}`);
 
       API.createUser(query)
       .then(res => {
-        alert(JSON.stringify(res));
+        // alert(JSON.stringify(res));
         if (res.data.success) {
 
         console.log("User created")

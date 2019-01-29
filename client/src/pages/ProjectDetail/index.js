@@ -1,3 +1,4 @@
+// Home Button??
 import React, { Component } from "react";
 import API from "../../../src/utils/API";
 import DevCard from "../../components/DevCard/DevCard";
@@ -36,7 +37,7 @@ class ProjectDetail extends Component {
 
 
   componentDidMount() {
-      // Grab Current Project
+    // Grab Current Project
     this.loadProject();
 
     // check for valid signin
@@ -54,9 +55,9 @@ class ProjectDetail extends Component {
           this.setState({
             currentUser: currentUser,
             currentUserId: currentUserId,
-           isLoggedIn: true, 
-          // userID:
-        });
+            isLoggedIn: true,
+            // userID:
+          });
           // window.location.assign('/view-event');
         } else {
           console.log("in failure handle");
@@ -65,7 +66,7 @@ class ProjectDetail extends Component {
           console.log("ERROR:  Would redirect to login.")
         };
       })
-        .catch (err => console.log(err));
+      .catch(err => console.log(err));
   }
 
 
@@ -91,22 +92,22 @@ class ProjectDetail extends Component {
         //     console.log(`loadDev method: ${JSON.stringify(res.data)}`);
         //     this.setState({
         //       developers: res.data
-              //   res.data._developers.forEach(function(developer) {
-              //     API.getDev(developer._id)
-              //     .then( red => {
-              // console.log(developers);
+        //   res.data._developers.forEach(function(developer) {
+        //     API.getDev(developer._id)
+        //     .then( red => {
+        // console.log(developers);
 
-                })
-            //   })
+      })
+      //   })
 
-            // })
-          
-  // loadDev = (id) => {
-  //   API.getDev(id)
-  //   .then(res => {
-  //     console.log(`loadDev method: ${JSON.stringify(res.data)}`);
-  //   this.setState({
-  //     developers: res.data
+      // })
+
+      // loadDev = (id) => {
+      //   API.getDev(id)
+      //   .then(res => {
+      //     console.log(`loadDev method: ${JSON.stringify(res.data)}`);
+      //   this.setState({
+      //     developers: res.data
       // name: res.data.name,
       // githubLink: res.data.github_link,
       // linkedinLink: res.data.linkedin_link,
@@ -115,9 +116,9 @@ class ProjectDetail extends Component {
       // imageURL: res.data.imageURL,
       // interview_count: res.data.interview_count
 
-    // })
-  // }
-  //     )
+      // })
+      // }
+      //     )
 
       .catch(err => console.log(`loadDevs function ${err}`));
   };
@@ -137,6 +138,10 @@ class ProjectDetail extends Component {
   render() {
     return (
       <div className="container">
+        <div>
+          <a href="/view-event"><button className="btn btn-lg back-button">Back to Projects</button></a>
+        </div>
+
         <div>
           <img className="uOfRLogo" src="../images/UofRproStudies.png" alt="University of Richmond logo" />
         </div>
@@ -165,8 +170,12 @@ class ProjectDetail extends Component {
                     portfolioLink={developer.portfolio_link}
                     imageURL={developer.imageURL}
                   />
-                   <NexmoMsg 
-                    phoneNumber={developer.phone_number}/>
+                  <NexmoMsg
+                    phoneNumber={developer.phone_number}
+                    devId={developer._id}
+                  />
+
+
                 </li>
               ))}
             </ul>

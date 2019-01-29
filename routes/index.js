@@ -3,7 +3,6 @@ const path = require("path");
 const router = require("express").Router();
 // const apiRoutes = require("./api");
 const loginController = require("../controllers/loginController");
-const devController = require ("../controllers/devController");
 
 // API Routes
 const developersController = require("../controllers/developersController");
@@ -12,30 +11,29 @@ const notesController = require("../controllers/notesController");
 const userController = require("../controllers/userController");
 
 //API Routes
+// 0-0-0-0-0-0-0-0-0-0-0-0-0--0-0-0-0-0-0-0-0--0--0-0-0-0-0-0-0-0-
+// 00-- PROJECT ROUTES --00
 
 //Create a new project
 router
 .route("/api/projects")
 .post(projectsController.create)
+.get(projectsController.findAll);
 
 router
 .route("/api/projects/:id")
 .put(projectsController.update)
 .get(projectsController.findProject);
 
-router.route("/api/projects")
-.get(projectsController.findAll);
 
-// router
-// .route("/api/project/:id")
-// .get(projectsController.findProject);
-
-
+// 0-0-0-0-0-0-0-0-0-0-0-0-0--0-0-0-0-0-0-0-0--0--0-0-0-0-0-0-0-0-
+// 00-- LOGIN ROUTES --00
 // Matches with "/api/login/signup" for full tree
 // Matches with "/signup" without index.js nesting 
 router
 .route("/signup")
-.post(loginController.signUp);
+.post(loginController.signUp)
+.get(loginController.findAll);
 
 
 // Matches with "/api/login/signin" for full tree
@@ -60,14 +58,17 @@ router
 
 // 0-0-0-0-0-0-0-0-0-0-0-0-0--0-0-0-0-0-0-0-0--0--0-0-0-0-0-0-0-0-
 // 00-- DEVS --00
-// router.route("/api/developers")
-// .get(developersController.findAll);
 
 //Create a new developer
 router
 .route("/api/developers")
 .post(developersController.create)
-.get(developersController.findDev);
+.get(developersController.findDev)
+.get(developersController.findAll);
+
+//Update by id
+router.route("/api/developers/:id")
+.put(developersController.update);
 
 // 0-0-0-0-0-0-0-0-0-0-0-0-0--0-0-0-0-0-0-0-0--0--0-0-0-0-0-0-0-0-
 // 00-- FIND USER INFO --00

@@ -9,7 +9,11 @@ const UserSchema = new Schema({
   company: { type: String, required: true },
   phoneNumber: { type: String, required: false },
   password: { type: String, required: true },
-  isDeleted:  { type: Boolean, default: false }
+  isDeleted:  { type: Boolean, default: false },
+  _notes: [{
+    type:String,
+    ref: "notes"
+  }]
 });
 
 

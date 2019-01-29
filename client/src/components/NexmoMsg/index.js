@@ -1,3 +1,4 @@
+// OK
 import React, { Component } from "react";
 import "./nexmoMsg.css";
 import Nexmo from "nexmo";
@@ -24,14 +25,13 @@ class NexmoMsg extends Component {
     }
 
     
-
     componentDidMount() {
         const currentUserId = sessionStorage.getItem("userId");
           const currentUser = sessionStorage.getItem("userData");
           this.setState({
             currentUser: currentUser,
             currentUserId: currentUserId,
-            // to: {props.phoneNumber}
+
         })
 
         this.getUserName(currentUser);
@@ -106,8 +106,10 @@ console.log(this.state.currentUser)
 
 
     makeContact = event => {
-
-        console.log("key: " + process.env.REACT_APP_API_KEY)
+                //Method to increment interview count under the developer
+                API.incrementDevInterviews(this.props.devId)
+                .then(res => console.log(res.data))
+                .catch(err => console.log(err))
         const nexmo = new Nexmo({
             // apiKey: process.env.API_KEY,
             // apiSecret: process.env.API_SECRET

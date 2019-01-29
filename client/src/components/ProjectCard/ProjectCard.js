@@ -1,13 +1,8 @@
+// OK
 import React from "react";
 import "./projectCard.css";
-import Checkbox from "../Checkbox";
+// import Checkbox from "../Checkbox";
 // import Notepad from "../Notepad";
-
-// projectView = event => {
-
-
-// }
-
 
 function ProjectCard(props) {
   return (

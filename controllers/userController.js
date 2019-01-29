@@ -1,3 +1,4 @@
+// OK
 const db = require("../models");
 
 module.exports = {

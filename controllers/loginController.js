@@ -13,6 +13,15 @@ const UserSession = require("../models/UserSession");
 // Defining methods for the loginController
 module.exports = {
 
+  //************************************************************/
+  //* Handling User Data
+  //************************************************************/
+  findAll: function(req, res) {
+    db.User
+      .find(req.query)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
 
   //************************************************************/
   //* Allow users to self register
@@ -47,8 +56,6 @@ module.exports = {
       });
     };
     userName = userName.toLowerCase();
-
-    // sessionStorage.setItem("loginController", userName);
 
 console.log(userName);
 console.log(db.User);

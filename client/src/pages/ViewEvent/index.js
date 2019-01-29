@@ -1,3 +1,4 @@
+// OK ALL vs None
 import React, { Component } from "react";
 import API from "../../../src/utils/API";
 import {BrowserRouter as Router,Link,
@@ -21,8 +22,10 @@ class ViewEvent extends Component {
 
 
   componentDidMount() {
+        // LOAD ALL PROJECTS
     this.loadProjects();
     
+    // CHECK FOR VALID USER
       let readToken = window.localStorage.getItem("SMC_authkey");
       console.log("Token Read = " + readToken);
       let query = {
@@ -32,7 +35,7 @@ class ViewEvent extends Component {
         .then(res => {
           if (res.data.success) {
             console.log("in success handle");
-
+          // SAVE USER NAME TO SESSION
             const currentUserId = sessionStorage.getItem("userId");
             const currentUser = sessionStorage.getItem("userData");
             this.setState({
@@ -63,16 +66,12 @@ class ViewEvent extends Component {
       .catch(err => console.log(err));
   };
 
-  // componentWillUnmount() {
-  //   sessionStorage.setItem(project._id)
-  // }
-
 
   render() {
     return (
       // <Router>
       <div>
-        <p>Welcome {}</p>
+        <p>Welcome {currentUser.toUpperCase()}</p>
 
         <div className="eventLogo">
           <img className="uOfRLogo" src="./images/UofRproStudies.png" alt="University of Richmond logo" />

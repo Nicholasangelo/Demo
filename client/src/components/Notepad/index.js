@@ -1,3 +1,4 @@
+// OK
 import React, { Component } from "react";
 import API from "../../../src/utils/API";
 import "./notepad.css";
@@ -59,7 +60,7 @@ showNotes = event => {
 
     API.saveNote(this.state.user)
     .then(res => {
-      alert(JSON.stringify(res));
+      // alert(JSON.stringify(res));
     })
     .catch (err => console.log(err))
 

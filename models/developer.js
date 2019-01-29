@@ -1,9 +1,10 @@
+// OK
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const developerSchema = new Schema({
   _project: {
-    type: mongoose.Schema.Types.ObjectId,
+    type: String,
     ref: "Project"
   },
   name: {

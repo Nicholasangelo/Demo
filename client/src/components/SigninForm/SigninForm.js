@@ -1,3 +1,4 @@
+// OK
 import React, { Component } from "react";
 import API from "../../utils/API";
 import "./signinForm.css";
@@ -13,10 +14,7 @@ class SigninForm extends Component {
         // Getting the value and name of the input which triggered the change
         let value = event.target.value;
         const name = event.target.name;
-    
-        // if (name === "password") {
-        //   value = value.substring(0, 15);
-        // }
+
         // Updating the input's state
         this.setState({
           [name]: value
