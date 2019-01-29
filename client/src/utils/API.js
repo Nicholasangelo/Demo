@@ -39,6 +39,9 @@ export default {
   getProjects: function(query) {
     return axios.get("/api/projects", query);
   },
+  getAllProjects: function() {
+    return axios.get("/api/projects");
+  },
   getProject: function(id) {
     return axios.get("/api/projects/" + id);
   },
@@ -50,6 +53,9 @@ export default {
   //Developers API
   createDeveloper: function(developerData) {
     return axios.post("/api/developers", developerData);
+  },
+  getAllDevs: function() {
+    return axios.get("/api/developers");
   },
    // getDevs: function(query) {
   //   return axios.get("/api/developers", query);

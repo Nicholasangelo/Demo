@@ -1,4 +1,6 @@
 .back-button {
-    margin-left: 100%;
-    margin-top: 2%;
+    position: relative;
+    left: 17em;
+    bottom: 2em;
+    box-shadow: 5px 2px 2px -2px;
 }

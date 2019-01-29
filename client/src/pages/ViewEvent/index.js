@@ -71,7 +71,7 @@ class ViewEvent extends Component {
     return (
       // <Router>
       <div>
-        <p>Welcome {currentUser.toUpperCase()}</p>
+        {/* <p>Welcome {currentUser.toUpperCase()}</p> */}
 
         <div className="eventLogo">
           <img className="uOfRLogo" src="./images/UofRproStudies.png" alt="University of Richmond logo" />

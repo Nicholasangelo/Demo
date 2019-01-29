@@ -138,12 +138,13 @@ class ProjectDetail extends Component {
   render() {
     return (
       <div className="container">
-        <div>
-          <a href="/view-event"><button className="btn btn-lg back-button">Back to Projects</button></a>
-        </div>
 
         <div>
           <img className="uOfRLogo" src="../images/UofRproStudies.png" alt="University of Richmond logo" />
+        </div>
+
+        <div>
+          <a href="/view-event"><button className="btn btn-sm back-button">projects</button></a>
         </div>
 
         <div className="projectTitle">

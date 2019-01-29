@@ -19,8 +19,8 @@ position: relative;
 /* z-index: -; */
 }
 .devItem{
-    background: #276EA9;
-    box-shadow: 1px 1px 7px 0px dimgrey;
+    background: inherit;
+    box-shadow: 2px 2px 7px 0px dimgrey;
     background-image: -webkit-linear-gradient(left, rgba(255,0,0,0), #CF5360);
     background-image: linear-gradient(to right, rgba(255,0,0,0), 30% #CF5360);
     font-size: 4vw;

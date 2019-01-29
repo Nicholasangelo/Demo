@@ -4,3 +4,7 @@
 .content{
     background: inherit;
 } */
+.projectCard:hover{
+    background: #CF5360;
+
+}
