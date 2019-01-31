@@ -74,15 +74,15 @@ router.route("/api/developers/:id")
 // 00-- FIND USER INFO --00
 router
 .route("/api/users/:user")
-.get(userController.getUserName);
-
+.get(userController.getUserName)
+.put(notesController.saveNote);
 
 // 0-0-0-0-0-0-0-0-0-0-0-0-0--0-0-0-0-0-0-0-0--0--0-0-0-0-0-0-0-0-
 // 00-- NOTES --00
-router
-.route("api/users/notes/")
-.put(notesController.saveNote)
-.get(notesController.getNote);
+// router
+// .route("api/users/:user")
+// .put(notesController.saveNote)
+// .get(notesController.getNote);
 
 //If no API routes are hit, send the React app
 router.use(function(req, res) {

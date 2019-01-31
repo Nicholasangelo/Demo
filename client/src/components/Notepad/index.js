@@ -6,16 +6,18 @@ import "./notepad.css";
 class Notepad extends Component {
   state = {
     note: "",
-    user: "",
+    currentUser: "",
     mode:'hide'
   }
-// componentDidMount() {
-//   this.setState({
-//     user: sessionStorage.getItem("userNameSS")
+componentDidMount() {
+  const currentUser = sessionStorage.getItem("userData");
+  this.setState({
+    currentUser: currentUser
     
-//   })
+  })
   
-// }
+  
+}
 
 
   handleInputChange = event => {
@@ -54,16 +56,20 @@ showNotes = event => {
       mode:'hide',
       note: this.state.note
     })
-    // let name = sessionStorage.getItem("userNameSS")
-    // console.log(`sessionStorage: ${name}`)
-    // console.log(sessionStorage.userNameSS)
 
-    API.saveNote(this.state.user)
+this.saveNote(this.state.currentUser)
+console.log(`UserNotes: ${this.state.currentUser}`);
+  }
+
+  saveNote = (query) => {
+    API.saveNote(query)
     .then(res => {
+      this.setState ({
+        note: res.data.notes
+      })
       // alert(JSON.stringify(res));
     })
     .catch (err => console.log(err))
-
   }
 
   renderNotepadContainer() {

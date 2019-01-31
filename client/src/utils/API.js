@@ -25,10 +25,10 @@ export default {
   },
 
   saveNote: function(query) {
-    return axios.put("/api/users/notes/", query);
+    return axios.put("/api/users/" + query);
   },
   getNote: function(query) {
-    return axios.put("/api/users/notes/", query);
+    return axios.put("/api/:users/notes/", query);
   },
 
  

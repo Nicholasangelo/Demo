@@ -82,7 +82,7 @@ console.log(this.state.currentUser)
         this.setState({
             mode: 'view',
             currentUser: currentUser,
-            msg: `${this.state.currentUser} from ${this.state.company} has requested an interview with you. Please contact them at ${this.state.phoneNumber}`
+            msg: `${this.state.currentUser} from ${this.state.company} has requested to schedule an interview with you. Please contact them at ${this.state.phoneNumber}`
         })
 
     }
@@ -117,7 +117,7 @@ console.log(this.state.currentUser)
             apiSecret: "wDmJ5xiRYKuy9Nb2"
         });
         // if (this.state.clicked = false) {
-        const msg = `${this.state.currentUser} from ${this.state.company} has requested an interview with you. Please contact them at ${this.state.phoneNumber}`
+        const msg = `${this.state.currentUser} from ${this.state.company} has requested to schedule an interview with you. Please contact them at ${this.state.phoneNumber}`
         const from = "17203866288";
         const to = this.props.phoneNumber
 
@@ -143,7 +143,7 @@ console.log(this.state.currentUser)
                 <div className="nexmoContainer"
                     isVisible={this.state.isVisible}>
                     <div className="nexmoMsg">
-                        <p>{this.state.currentUser} from {this.state.company} <br />has requested <br />an interview with you. <br />Please contact them at {this.state.phoneNumber}</p>
+                        <p>{this.state.currentUser} from {this.state.company} <br />has requested <br /> to schedule an interview with you. <br />Please contact them at {this.state.phoneNumber}</p>
                         <button
                             className="makeContactBtn btn btn-sm"
                             onClick={this.makeContact}
