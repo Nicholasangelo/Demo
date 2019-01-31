@@ -4,7 +4,7 @@ import API from "../../../src/utils/API";
 import DevCard from "../../components/DevCard/DevCard";
 import "./style.css"
 import BlurBox from "../../components/BlurBox/BlurBox.js";
-import Notepad from "../../components/Notepad";
+// import Notepad from "../../components/Notepad";
 import NexmoMsg from "../../components/NexmoMsg";
 import StickyFooter from "../../components/StickyFooter";
 
@@ -153,7 +153,7 @@ class ProjectDetail extends Component {
 
           {/* <h5>{ props.projectDesc }</h5> */}
         </div>
-        <Notepad />
+        {/* <Notepad /> */}
 
         <div>
           {this.state.developers.length ? (

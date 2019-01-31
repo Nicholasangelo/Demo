@@ -57,7 +57,7 @@ showNotes = event => {
       note: this.state.note
     })
 
-this.saveNote(this.state.currentUser)
+this.saveNote(this.state.currentUser, this.state.notes)
 console.log(`UserNotes: ${this.state.currentUser}`);
   }
 

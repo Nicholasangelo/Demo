@@ -2,9 +2,9 @@ const db = require("../models");
 
 module.exports = {
 saveNote: (req, res) => {
-    console.log(`findAndUpdate Query: ${req.body}`)
+    // console.log(`findAndUpdate Query: ${req.body}`)
     db.Users
-    .findOneAndUpdate({userName: req.params.user}, {$set: {notes: req.body.notes}}, {new: true})
+    .findOneAndUpdate({userName: req.params.user}, {$set: {notes: req.body}}, {new: true})
     .then(dbModel => res.json(dbModel))
     .catch(err => res.status(422).json(err));
 },
