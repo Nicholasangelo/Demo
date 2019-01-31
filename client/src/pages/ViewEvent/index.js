@@ -8,7 +8,7 @@ import {BrowserRouter as Router,Link,
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import "./style.css";
 import Checkbox from "../../components/Checkbox";
-import Blurbox from "../../components/BlurBox/BlurBox";
+import FooterEventPage from "../../components/FooterEventPage"
 import { PromiseProvider } from "mongoose";
 import { userInfo } from "os";
 
@@ -77,7 +77,6 @@ class ViewEvent extends Component {
           <img className="uOfRLogo" src="./images/UofRproStudies.png" alt="University of Richmond logo" />
         </div>
 
-        <Blurbox />
         {this.state.projects.length ? (
           <ul className="projectList list-group list-group-flush">
             {this.state.projects.map((project) => (
@@ -106,7 +105,7 @@ class ViewEvent extends Component {
         ) : (
             <h3>No Results to Display</h3>
           )}
-
+<FooterEventPage/>
       </div>
       // </Router>
     );

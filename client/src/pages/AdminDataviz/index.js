@@ -89,7 +89,6 @@ class AdminDatataviz extends Component {
   render() {
       return (
         <div>
-          <a className="btn btn-large back-button" href="/manage-event">Back To Manage Event</a>
           <div className="container text-center">
             <h1 className="text-center">Event Data</h1>
             {this.handleChartToggle()}

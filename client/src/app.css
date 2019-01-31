@@ -2,3 +2,275 @@ html, body {
     overflow: auto;
     height: 100%;
 }
+/* BLURBOX COMPONENT */
+.blur{
+    background-image: linear-gradient(to right, rgba(255,0,0,0), white,  rgba(255,0,0,1));
+    margin: -11px 0 50px;
+    background-attachment: fixed;
+    -webkit-filter: blur(3px);
+    filter: blur(2px);
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    box-shadow: inset 0 0 0 200px grey;
+    overflow: hidden;
+    position: absolute;
+    padding: 0;
+    border-radius: 26px;
+    text-align: center;
+}
+/* CREATE ACCT FORM COMPONENT */
+.btn{
+    background-color: #CF5360;
+    color: ghostwhite;
+    box-shadow: 2px 2px 5px #B37D4E;
+}
+.createAcctForm{ 
+    font-size: 18px;
+    font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
+    font-weight: 700;
+    color: #276EA9;
+}
+
+/* DEV CARD COMPONENT */
+.projectCheck{
+    position: absolute;
+    float: right;
+        /* border: inset 2px; */
+    }
+    .img-container{
+    height: 80%;
+    width: 32%;
+    /* border: inset 2px; */
+    position: absolute;
+    float: left;
+    /* border-radius: 70px; */
+    }
+    .devImg{
+        height: 100;
+    width: 100%;
+    position: relative;
+    /* filter: box-shadow (2px 2px 2px pink); */
+    }
+    .devItem{
+        background: #276EA9;
+        box-shadow: 2px 2px 7px 0px dimgrey;
+        background-image: -webkit-linear-gradient(left, rgba(255,0,0,0), #CF5360);
+        background-image: linear-gradient(to right, rgba(255,0,0,0), 30% #CF5360);
+        font-size: 4vw;
+        font-family: "News Cycle", "Arial Narrow", sans-serif;
+        overflow: hidden;
+        padding: 0 0 29px;
+        margin-bottom: 10px;
+        color: ghostwhite;
+        
+    }
+    /* .card{
+        /* background-color: #B37D4E; */
+    /* box-shadow: 0px 2px 1px; */
+    /* font-size: 20px; */
+    /* font-family: "News Cycle", "Arial Narrow Bold", sans-serif; */
+    /* font-weight: 700; */
+    /* color: #276EA9; */
+    /* } */
+    .content{
+    position: relative;
+    text-align: right;
+        /* clear: both; */
+    }
+    .devIcons{
+    height: 40px;
+    width: 40px;
+    }
+    .devName{
+        /* text-decoration: underline; */
+        text-shadow: 1px 1px 1px black;
+    }
+    .contactIcon{
+    height: 60px;
+    width: 40px;
+    }
+    /* .contactLinks{
+    float: right;
+    position: relative;
+    bottom: 2em;
+    } */
+
+    /* NEXMO COMPONENT */
+
+.nexmoDiv{
+    position: relative;
+    float: right;
+    text-align: right;
+    font-size: 1rem;
+    }
+
+/* SIGN IN FORM */
+.signInForm{ 
+    font-size: 18px;
+    font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
+    font-weight: 700;
+    color: #276EA9;
+}
+.btn{
+    background-color: #CF5360;
+    color: ghostwhite;
+    box-shadow: 2px 2px 5px #B37D4E;
+}
+
+/* WELCOME NAV COMPONENT */
+.nav {
+    justify-content: center;
+}
+
+/* ADMIN DATA VIZ PAGE */
+.back-button {
+    position: relative;
+    left: 17em;
+    bottom: 2em;
+    box-shadow: 5px 2px 2px -2px;
+}
+
+/* ADMIN MANAGE PAGE */
+.home-button {
+    position: relative;
+    left: 17em;
+    bottom: 2em;
+    box-shadow: 5px 2px 2px -2px;
+}
+.adminManLogo{
+height: 100px;
+width: 170px;
+
+}
+.adminManLogoDiv{
+    text-align: center;
+}
+
+/* NO MATCH PAGE */
+.fluid404 {
+    padding-top: 5em;
+    height: 50vh;
+    width: 80vw;
+    text-align: center;
+
+}
+.logoDiv{
+    position: absolute;
+}
+.welcomeImgDiv{
+    text-align: center;
+    position: relative;
+}
+
+/* PROJECT DETAIL PAGE */
+.eventLogo{
+    text-align: center;
+}
+
+.devItem{
+    background: #276EA9;
+    box-shadow: 2px 2px 7px 0px dimgrey;
+    background-image: linear-gradient(to right, rgba(255,0,0,0), 30% #CF5360);
+    background-image: -webkit-linear-gradient(left, rgba(255,0,0,0), #CF5360);
+    font-size: 4vw;
+    font-family: "News Cycle", "Arial Narrow", sans-serif;
+    overflow: hidden;
+    padding: 0 0 29px;
+    margin-bottom: 10px;
+    color: ghostwhite;
+} 
+
+/* VIEW EVENT PAGE */
+.eventLogo{
+    text-align: center;
+}
+.uOfRLogo{
+    height: 10em;
+    width: 21em;
+}
+.project{
+    background-color: inherit;
+    box-shadow: 0px 7px 10px 0px dimgrey;
+    background-image: linear-gradient(to right, rgba(255,0,0,0), #CF5360);
+    color: ghostwhite;
+    font-size: 4vw;
+    font-family: "News Cycle", "Arial Narrow", sans-serif;
+    overflow: hidden;
+    padding: 0 0 4px;
+    margin-bottom: 6px;
+    
+}
+.projectDetailTitle{
+    text-align: center;
+}
+    /* .project:hover {
+        text-decoration: none;
+        background: #CF5360;
+    } */
+
+/* WELCOME PAGE */
+body {
+    background-color: antiquewhite;
+    background: linear-gradient(antiquewhite, #CF5360);
+
+}
+.welcomeImg {
+    width: 240px;
+    height: 200px;
+}
+.welcomeImgDiv {
+text-align: center;
+}
+
+a:-webkit-any-link {
+    text-decoration: none;
+}
+
+.footer {
+    background: inherit;
+    margin: 0;
+    padding: 0;
+    position: sticky;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    display: inline-flex;
+    text-align: right;
+    box-shadow: inset 0px 0px 58px 8px rgb(238, 139, 139);
+    text-shadow: 0px 0px 12px rgb(238, 139, 139);
+    border-radius: 15px;
+}
+.eventFooter{
+    background: inherit;
+    margin: 0;
+    padding: 0;
+    position: sticky;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    display: inline-flex;
+    text-align: right;
+    box-shadow: inset 0px 0px 58px 12px #276EA9;
+    text-shadow: 0px 0px 12px rgb(238, 139, 139);
+    border-radius: 15px;
+    
+}
+.footerNav{
+    color: ghostwhite;
+}
+.blurFoot {
+    background: rgb(238, 139, 139);
+    background-attachment: fixed;
+    -webkit-filter: blur(16px);
+    filter: blur(16px);
+    height: 66px;
+    top: 92%;
+    height: 66px;
+    position: sticky;
+    box-shadow: inset 0px 0px 12px white;
+}
+
+
