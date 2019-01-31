@@ -51,7 +51,9 @@ class AdminDatataviz extends Component {
   handleChartToggle = () => {
     let totalInterviews = 0;
     this.state.devs.forEach(function(developer) {
-      totalInterviews = developer.interview_count + totalInterviews;
+      if (developer.interview_count !== undefined) {
+        totalInterviews = developer.interview_count + totalInterviews;
+      }
     })
     let data = [
       {name: 'Guests', count: this.state.users.length, fill: '#8884d8'},
