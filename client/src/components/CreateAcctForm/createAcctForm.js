@@ -72,7 +72,7 @@ class CreateAcctForm extends Component {
         return (
           <form>
            
-            <div className="form-group">
+            <div className=" createAcctForm form-group">
             <label htmlFor="inputUsername">userName</label>
               <input
                 className="form-control"

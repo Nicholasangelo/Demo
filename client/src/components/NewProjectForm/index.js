@@ -153,7 +153,7 @@ class NewProjectForm extends Component {
               name="projectImageURL"
               id="projectImageURL"
               type="text"
-              placeholder="Link to the Project Logo Image"
+              placeholder="Link to the Project"
               onChange={this.handleStaticInputChange}
             />
           </div>

@@ -76,7 +76,7 @@ class SigninForm extends Component {
         return (
           <div>
             <form>
-              <div className="form-group">
+              <div className="signInForm form-group">
                 <label htmlFor="inputUsername">userName</label>
                   <input
                   className="form-control"

@@ -6,6 +6,7 @@ import "./style.css"
 import BlurBox from "../../components/BlurBox/BlurBox.js";
 import Notepad from "../../components/Notepad";
 import NexmoMsg from "../../components/NexmoMsg";
+import StickyFooter from "../../components/StickyFooter";
 
 // import mongoose from "mongoose";
 // import Developers from "../../../src/developers.json";
@@ -22,6 +23,7 @@ class ProjectDetail extends Component {
     currentUserId: "",
 
     projectName: "",
+    projectLink: "",
 
     myObjectId: "",
 
@@ -77,9 +79,10 @@ class ProjectDetail extends Component {
       .then(res => {
 
         console.log(`loadProjectmethod: ${JSON.stringify(res.data)}`);
-
+        console.log(res.data.link)
         this.setState({
           projectName: res.data.name,
+          projectLink: res.data.link,
           developers: res.data._developers
           // myObjectId: res.data._developers
           // mongoose.Types.ObjectId(res.data._developers[1])
@@ -137,19 +140,16 @@ class ProjectDetail extends Component {
   };
   render() {
     return (
+      <>
       <div className="container">
 
         <div>
           <img className="uOfRLogo" src="../images/UofRproStudies.png" alt="University of Richmond logo" />
         </div>
 
-        <div>
-          <a href="/view-event"><button className="btn btn-sm back-button">projects</button></a>
-        </div>
-
-        <div className="projectTitle">
-          <h2> {this.state.projectName}
-          </h2>
+        <div className="projectDetailTitle">
+          <h2> {this.state.projectName}</h2>
+          <a href={this.state.projectLink}><span>{this.state.projectLink}</span></a>
 
           {/* <h5>{ props.projectDesc }</h5> */}
         </div>
@@ -163,7 +163,6 @@ class ProjectDetail extends Component {
                   className="devItem list-group-item"
                 // key={developer._id}
                 >
-                  <BlurBox />
                   <DevCard
                     name={developer.name}
                     linkedinLink={developer.linkedin_link}
@@ -184,8 +183,11 @@ class ProjectDetail extends Component {
               <h3>No Results to Display</h3>
             )}
         </div>
+        
       </div>
-
+      <StickyFooter />
+      
+      </>
     );
   }
 
