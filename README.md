@@ -1,4 +1,4 @@
-![](https://github.com/Nicholasangelo/Demo/blob/master/client/public/images/demoDayBeer.png&s=200)
+![](https://demoday-richmond.herokuapp.com/images/demoDayBeer.png&s=200)
 demoDay
 =======================
 
